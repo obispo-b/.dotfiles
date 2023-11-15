@@ -55,6 +55,6 @@ alias v="nvim"
 alias qw="setxkbmap us && setxkbmap -model 'asus_laptop'"
 alias w='wl-copy'
 alias code="flatpak run com.visualstudio.code"
-alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME' 
+alias cfg='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME' 
 
 export PATH="$PATH:/home/bruno/.local/bin"
