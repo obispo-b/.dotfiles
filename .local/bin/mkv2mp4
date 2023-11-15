@@ -1,0 +1,7 @@
+#!/bin/bash
+
+ffmpeg -hide_banner -i "$1".mkv -c:v h264_nvenc -preset llhq -rc vbr -crf 16 -profile:v high444p -vf format=yuv444p -c:a copy temp.mkv
+
+ffmpeg -i temp.mkv -c copy "$1".mp4
+
+rm temp.mkv
