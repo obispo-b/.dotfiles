@@ -1,0 +1,215 @@
+# Variables
+set $mod Mod4
+set $left n
+set $down e
+set $up i
+set $right o
+set $menu "rofi -show drun"
+set $screenshot "distrobox-enter -n archlinux -e 'grim ~/Pictures/Screenshots/$(date +'screenshot_%Y-%m-%d_%H:%M:%S.png')'"
+set $clipboard_screenshot "distrobox-enter -n archlinux -e 'grim - | wl-copy'"
+set $screenclip "distrobox-enter -n archlinux -e 'grim -g "$(slurp -d)" - | wl-copy'"
+set $leave /home/bruno/.config/rofi/leave.sh
+# set $terminal "kitty toolbox run -c test zsh"
+# set $terminal "kitty distrobox enter archlinux -- zsh"
+set $terminal "distrobox-enter -n archlinux -e kitty -- zsh"
+set $notes "flatpak run net.cozic.joplin_desktop"
+set $browser "flatpak run io.gitlab.librewolf-community"
+# set $file_explorer "kitty toolbox run -c test lf"
+set $file_explorer "distrobox-enter -n archlinux -e kitty -- lf"
+set $discord "flatpak run com.discordapp.Discord"
+set $freetube "flatpak run io.freetubeapp.FreeTube"
+set $jellyfin "flatpak run com.github.iwalton3.jellyfin-media-player"
+set $email "flatpak run com.tutanota.Tutanota"
+set $whatsapp "flatpak run io.github.mimbrero.WhatsAppDesktop"
+set $polkit /usr/libexec/polkit-gnome-authentication-agent-1
+set $wallpaper ~/Pictures/Wallpapers/erik-mclean-ZRns2R5azu0-unsplash.jpg
+set $lock ~/.config/sway/lock
+
+# Autostart
+exec "syncthing -no-browser"
+exec_always "systemctl --user start onedrive"
+exec_always "distrobox-enter -n archlinux -e 'autotiling'"
+exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+exec $polkit
+output * background $wallpaper fill
+exec swayidle before-sleep $lock
+exec waybar
+exec swaync
+
+# Keybindings
+bindsym $mod+q kill
+bindsym $mod+Return exec $terminal
+bindsym $mod+space exec $menu
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
+bindsym XF86TouchpadToggle exec "swaymsg input type:touchpad events toggle enabled disabled"
+bindsym $mod+Shift+W exec $whatsapp
+bindsym $mod+y exec $freetube
+bindsym $mod+Shift+J exec $jellyfin
+bindsym $mod+l exec $browser
+bindsym $mod+j exec $notes
+bindsym $mod+Shift+S exec $leave
+bindsym $mod+u exec $file_explorer
+bindsym Print exec $screenshot
+bindsym $mod+Shift+Print exec $clipboard_screenshot
+bindsym $mod+b exec $clipboard_screenshot
+bindsym Shift+Print exec $screenclip
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# change focus
+bindsym $mod+$left focus left
+bindsym $mod+$down focus down
+bindsym $mod+$up focus up
+bindsym $mod+$right focus right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Shift+$left move left
+bindsym $mod+Shift+$down move down
+bindsym $mod+Shift+$up move up
+bindsym $mod+Shift+$right move right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# split in horizontal orientation
+bindsym $mod+h split h
+
+# split in vertical orientation
+bindsym $mod+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+t fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+r layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+f layout toggle split
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+# bindsym $mod+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# focus the child container
+#bindsym $mod+d focus child
+
+# font
+font pango:JetBrains Mono Nerd Font 13
+
+# Define names for default workspaces for which we configure key bindings later on.
+# We use variables to avoid repeating the names in multiple places.
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
+# switch to workspace
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+bindsym $mod+6 workspace number $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+9 workspace number $ws9
+bindsym $mod+0 workspace number $ws10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9
+bindsym $mod+Shift+0 move container to workspace number $ws10
+
+# reload the configuration file
+bindsym $mod+Shift+P reload
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+  # These bindings trigger as soon as you enter the resize mode
+  bindsym $left resize shrink width 10 px or 10 ppt
+  bindsym $down resize grow height 10 px or 10 ppt
+  bindsym $up resize shrink height 10 px or 10 ppt
+  bindsym $right resize grow width 10 px or 10 ppt
+  # same bindings, but for the arrow keys
+  bindsym Left resize shrink width 10 px or 10 ppt
+  bindsym Down resize grow height 10 px or 10 ppt
+  bindsym Up resize shrink height 10 px or 10 ppt
+  bindsym Right resize grow width 10 px or 10 ppt
+  # back to normal: Enter or Escape or $mod+r
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+  bindsym $mod+p mode "default"
+}
+
+bindsym $mod+p mode "resize"
+
+# class                 border  bground text    indicator child_border
+client.focused          #83CAFA #51A2DA #FFFFFF #83CAFA   #51A2DA
+client.focused_inactive #8C8C8C #4C4C4C #FFFFFF #4C4C4C   #8C8C8C
+client.unfocused        #4C4C4C #222222 #888888 #292D2E   #222222
+client.urgent           #EC69A0 #DB3279 #FFFFFF #DB3279   #DB3279
+client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
+
+for_window [app_id="Alacritty"] opacity 0.9
+for_window [class="Alacritty"] opacity 0.9
+for_window [app_id="kitty"] opacity 0.9
+for_window [class="kitty"] opacity 0.9
+for_window [app_id="foot"] opacity 0.9
+for_window [class="foot"] opacity 0.9
+# Window borders
+default_border pixel 2
+default_floating_border normal
+hide_edge_borders smart
+smart_gaps on
+gaps inner 0
+
+# client.background       #FFFFFF
+
+input "type:touchpad" {
+  accel_profile adaptive
+  left_handed disabled
+  tap enabled
+  natural_scroll enabled
+  dwt enabled
+  pointer_accel 0.74 # set mouse sensitivity (between -1 and 1)
+}
+
+input * {
+  xkb_model     pc105angle
+  xkb_layout    us
+  xkb_variant   cmk_ed_dh
+  xkb_options   lv5:caps_switch_lock,misc:extend,compose:menu
+}
