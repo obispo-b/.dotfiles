@@ -1,0 +1,11 @@
+~/
+~/.config/
+~/.local/
+~/.config/nvim/lua/
+~/OneDrive/ORT/
+~/OneDrive/ORT/Semestre\ 4/
+~/OneDrive/ORT/Semestre\ 4/FIS/
+~/OneDrive/ORT/Semestre\ 4/Algoritmos2/
+~/OneDrive/ORT/Semestre\ 4/Base\ de\ datos\ 1/
+~/OneDrive/ORT/Semestre\ 4/Sistemas\ Operativos/
+~/OneDrive/ORT/Semestre\ 4/Optimización\ con\ álgebra\ lineal/
