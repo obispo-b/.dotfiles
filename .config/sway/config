@@ -11,7 +11,7 @@ set $screenclip "distrobox-enter -n arch -e 'grim -g "$(slurp -d)" - | wl-copy'"
 set $leave /home/bruno/.config/rofi/leave.sh
 # set $terminal "kitty toolbox run -c test zsh"
 # set $terminal "kitty distrobox enter archlinux -- zsh"
-set $terminal "distrobox-enter -n arch -e kitty -- tmux"
+set $terminal "distrobox-enter -n arch -e kitty -- tmux new-session -A -s main"
 set $notes "flatpak run net.cozic.joplin_desktop"
 set $browser "flatpak run io.gitlab.librewolf-community"
 # set $file_explorer "kitty toolbox run -c test lf"

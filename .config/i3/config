@@ -17,7 +17,7 @@ set $leave ~/.config/rofi/leave.sh
 # set $terminal "alacritty -e distrobox enter archlinux"
 # set $terminal "alacritty -e toolbox run -c fedora-toolbox-38 zsh"
 # set $terminal "alacritty -e distrobox enter archlinux"
-set $terminal "distrobox-enter -n archlinux -e 'alacritty -e tmux'"
+set $terminal "distrobox-enter -n archlinux -e 'alacritty -e tmux new-session -A -s main"'"
 set $handwriting "flatpak run com.github.xournalpp.xournalpp"
 set $notes "flatpak run net.cozic.joplin_desktop"
 set $steam "flatpak run com.valvesoftware.Steam"
