@@ -1,7 +1,7 @@
 ~/
 ~/.config/
 ~/.local/
-~/.config/nvim/lua/
+~/.config/nvim/
 ~/OneDrive/ORT/
 ~/OneDrive/ORT/Semestre\ 4/
 ~/OneDrive/ORT/Semestre\ 4/FIS/
