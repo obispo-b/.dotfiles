@@ -5,13 +5,13 @@ set $down e
 set $up i
 set $right o
 set $menu "rofi -show drun"
-set $screenshot "distrobox-enter -n arch -e 'grim ~/Pictures/Screenshots/$(date +'screenshot_%Y-%m-%d_%H:%M:%S.png')'"
-set $clipboard_screenshot "distrobox-enter -n arch -e 'grim - | wl-copy'"
-set $screenclip "distrobox-enter -n arch -e 'grim -g "$(slurp -d)" - | wl-copy'"
+set $screenshot "grim ~/Pictures/Screenshots/$(date +'screenshot_%Y-%m-%d_%H:%M:%S.png')"
+set $clipboard_screenshot "grim - | wl-copy"
+set $screenclip "grim -g "$(slurp -d)" - | wl-copy"
 set $leave /home/bruno/.config/rofi/leave.sh
 # set $terminal "kitty toolbox run -c test zsh"
 # set $terminal "kitty distrobox enter archlinux -- zsh"
-set $terminal "distrobox-enter -n arch -e kitty -- tmux new-session -A -s main"
+set $terminal "kitty tmux new-session -A -s main"
 set $notes "flatpak run net.cozic.joplin_desktop"
 set $browser "flatpak run io.gitlab.librewolf-community"
 # set $file_explorer "kitty toolbox run -c test lf"
@@ -22,11 +22,12 @@ set $jellyfin "flatpak run com.github.iwalton3.jellyfin-media-player"
 set $email "flatpak run com.tutanota.Tutanota"
 set $whatsapp "flatpak run io.github.mimbrero.WhatsAppDesktop"
 set $polkit /usr/libexec/polkit-gnome-authentication-agent-1
-set $wallpaper ~/Pictures/Wallpapers/erik-mclean-ZRns2R5azu0-unsplash.jpg
+set $wallpaper ~/Pictures/Wallpapers/green.jpg
 set $lock ~/.config/sway/lock
 
 # Autostart
 exec "syncthing -no-browser"
+exec nm-applet
 exec_always "systemctl --user start onedrive"
 exec_always "distrobox-enter -n archlinux -e 'autotiling'"
 exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
@@ -41,6 +42,7 @@ exec swaync
 bindsym $mod+q kill
 bindsym $mod+Return exec $terminal
 bindsym $mod+space exec $menu
+bindsym $mod+z exec "dmenu_run -nf '#BBBBBB' -nb '#222222' -sb '#005577' -sf '#EEEEEE' -fn 'JetBrains Mono Nerd Font-10'"
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
