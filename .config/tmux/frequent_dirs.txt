@@ -1,9 +1,9 @@
 ~/
 ~/Personal/
 ~/.config/
-~/.local/
-~/.config/nvim/
-~/OneDrive/ORT/
+~/OneDrive/ORT/Semestre\ 1/
+~/OneDrive/ORT/Semestre\ 2/
+~/OneDrive/ORT/Semestre\ 3/
 ~/OneDrive/ORT/Semestre\ 4/
 ~/OneDrive/ORT/Semestre\ 4/FIS/
 ~/OneDrive/ORT/Semestre\ 4/Algoritmos2/
