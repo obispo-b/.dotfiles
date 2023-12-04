@@ -1,7 +1,6 @@
 #!/bin/bash
 
 frequent_dirs=$(tr '\n' ' ' <~/.config/tmux/frequent_dirs.txt)
-pwd >~/.config/tmux/previous-dir.txt
 
 if [[ $# -eq 1 ]]; then
 	selected=$1
@@ -13,12 +12,7 @@ if [[ -z $selected ]]; then
 	exit 0
 fi
 
-# Prefix + , to go to previous directory
-if [[ $selected == ',' ]]; then
-	selected_name=$(basename <~/.config/tmux/previous-dir.txt | tr . _)
-else
-	selected_name=$(basename "$selected" | tr . _)
-fi
+selected_name=$(basename "$selected" | tr . _)
 tmux_running=$(pgrep tmux)
 
 if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
