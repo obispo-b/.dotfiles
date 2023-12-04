@@ -12,3 +12,4 @@ video/gif=mpv.desktop
 video/mp4=mpv.desktop
 video/mkv=mpv.desktop
 video/mkv=mpv.desktop
+application/gzip=com.github.xournalpp.xournalpp.desktop
