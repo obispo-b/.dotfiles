@@ -56,5 +56,6 @@ alias qw="setxkbmap us && setxkbmap -model 'asus_laptop'"
 alias w='wl-copy'
 alias code="flatpak run com.visualstudio.code"
 alias cfg='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME' 
+alias mic='pactl load-module module-null-sink sink_name=Source && pactl load-module module-virtual-source source_name=VirtualMic master=Source.monitor'
 
 export PATH="$PATH:/home/bruno/.local/bin"

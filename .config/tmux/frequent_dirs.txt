@@ -6,7 +6,7 @@
 ~/OneDrive/ORT/Semestre\ 3/
 ~/OneDrive/ORT/Semestre\ 4/
 ~/OneDrive/ORT/Semestre\ 4/FIS/
-~/OneDrive/ORT/Semestre\ 4/Algoritmos2/
+~/OneDrive/ORT/Semestre\ 4/Algoritmos\ 2/
 ~/OneDrive/ORT/Semestre\ 4/Base\ de\ datos\ 1/
 ~/OneDrive/ORT/Semestre\ 4/Sistemas\ Operativos/
 ~/OneDrive/ORT/Semestre\ 4/Optimización\ con\ álgebra\ lineal/

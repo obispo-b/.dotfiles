@@ -6,10 +6,10 @@ set shellopts '-eu'
 
 # set previewer
 # set previewer ~/.config/lf/previewer
-set previewer ctpv
-set cleaner ctpvclear
-&ctpv -s $id
-&ctpvquit $id
+# set previewer ctpv
+# set cleaner ctpvclear
+# &ctpv -s $id
+# &ctpvquit $id
 
 # set internal field separator (IFS) to "\n" for shell commands
 set ifs "\n"

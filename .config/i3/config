@@ -27,6 +27,7 @@ set $jellyfin "flatpak run com.github.iwalton3.jellyfin-media-player"
 set $email "flatpak run com.tutanota.Tutanota"
 set $whatsapp "flatpak run io.github.mimbrero.WhatsAppDesktop"
 set $polkit /usr/libexec/polkit-gnome-authentication-agent-1
+set $mutemic "pactl set-source-mute 2037 toggle"
 
 # Keybindings
 bindsym $mod+Return exec $terminal
@@ -47,6 +48,7 @@ bindsym $mod+Shift+L exec "flatpak run io.gitlab.librewolf-community"
 bindsym Print exec $screenshot
 bindsym --release Shift+Print exec $screenclip
 bindsym --release $mod+Shift+Print exec $savescreenclip
+bindsym $mod+Shift+M exec $mutemic
 
 # Workspaces
 set $ws1 "1"
