@@ -52,6 +52,13 @@ cmd open ${{
 }}
 
 # cmd open ${{
+#   case $(file --mime-type -Lb $f) in
+#     text/*) nvim $f ;;
+#     *) for f in $fx; do xdg-open $f > /dev/null 2> /dev/null & done;;
+#   esac
+# }}
+
+# cmd open ${{
 #     case $(file --mime-type "$f" -bL) in
 #         text/*|application/json) $EDITOR "$f";;
 #         *) xdg-open "$f" ;;
@@ -153,7 +160,7 @@ map gd cd ~/Downloads
 map gp cd ~/Pictures
 map gc cd ~/.config
 map gr cd ~/repos
-map go cd ~/OneDrive/ORT/
+map go cd ~/OneDrive/ORT/Semestre\ 4/
 map gv cd ~/Videos
 map gs cd ~/.local/bin
 map gt cd ~/.local/share/Trash/files
