@@ -6,7 +6,7 @@ alias cfg='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 ```
 2. Clone the repo
 ```bash
-git clone --bare https://github.com/obispo-b/.dotfiles.git ~/.cfg
+git clone --bare https://github.com/obispobruno/.dotfiles.git ~/.cfg
 ```
 3. Checkout content to home
 ```bash
