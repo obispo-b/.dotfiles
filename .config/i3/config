@@ -19,7 +19,7 @@ set $handwriting "flatpak run com.github.xournalpp.xournalpp"
 set $notes "flatpak run net.cozic.joplin_desktop"
 set $steam "flatpak run com.valvesoftware.Steam"
 set $browser firefox
-set $file_explorer "alacritty -e lf"
+set $file_explorer "alacritty -e tmux new-session -A -s Ex"
 set $discord "flatpak run com.discordapp.Discord"
 set $rss "newsflash"
 set $freetube "flatpak run io.freetubeapp.FreeTube"
