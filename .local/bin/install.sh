@@ -78,12 +78,11 @@ git clone --bare https://github.com/obispobruno/.dotfiles.git ~/.dotfiles
 git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout
 git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME config --local status.showUntrackedFiles no
 
-
 git clone https://github.com/DreymaR/BigBagKbdTrixXKB.git ~/Downloads/BigBagKbdTrixXKB
 sudo ~/Downloads/BigBagKbdTrixXKB/install-dreymar-xmod.sh
 
 mkdir -p ~/.local/share/fonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/JetBrainsMono.zip ~/.local/share/fonts
+wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/JetBrainsMono.zip
 7z x ~/.local/share/fonts/JetBrainsMono.zip -o$HOME/.local/share/fonts
 
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
