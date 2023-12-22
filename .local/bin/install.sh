@@ -64,11 +64,11 @@ sudo dnf install -y \
 	pandoc \
 	texlive
 
-rm -rf ~/.config/nvim
+rm -rf ~/.config
+rm -rf ~/.local/bin
 rm -rf ~/.local/share/nvim
 rm -rf ~/.bashrc
 rm -rf ~/.zshrc
-rm -rf ~/.config/i3
 rm -rf ~/.dotfiles
 
 git clone https://github.com/obispobruno/nvim-config.git ~/.config/nvim
