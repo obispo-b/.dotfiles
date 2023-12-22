@@ -112,7 +112,11 @@ if [[ $flat != 'n' ]]; then
 		org.pulseaudio.pavucontrol
 fi
 
+rm -rf ~/.oh-my-zsh/
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git ~/.oh-my-zsh/custom/plugins/zsh-autocomplete
+
+rm -rf ~/.zshrc
+mv ~/.zshrc.pre-oh-my-zsh ~/.zshrc
