@@ -14,8 +14,8 @@ echo "$faster_dnf" | sudo tee -a /etc/dnf/dnf.conf >/dev/null
 
 sudo dnf upgrade -y
 
-sudo dnf copr enable pennbauman/ports
-sudo dnf copr enable petersen/haskell-language-server
+yes | sudo dnf copr enable pennbauman/ports
+yes | sudo dnf copr enable petersen/haskell-language-server
 
 sudo dnf install -y \
 	git \
@@ -68,6 +68,7 @@ rm -rf ~/.config/nvim
 rm -rf ~/.local/share/nvim
 rm -rf ~/.bashrc
 rm -rf ~/.zshrc
+rm -rf ~/.config/i3
 
 git clone https://github.com/obispobruno/nvim-config.git ~/.config/nvim
 git clone --bare https://github.com/obispobruno/.dotfiles.git ~/.dotfiles
@@ -81,6 +82,10 @@ git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git ~/.
 
 git clone https://github.com/DreymaR/BigBagKbdTrixXKB.git ~/Downloads/BigBagKbdTrixXKB
 sudo ./Downloads/BigBagKbdTrixXKB/install-dreymar-xmod.sh
+
+mkdir -p ~/.local/share/fonts
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/JetBrainsMono.zip ~/.local/share/fonts
+unzip ~/.local/share/fonts/JetBrainsMono.zip -d ~/.local/share/fonts
 
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
   
