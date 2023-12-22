@@ -82,7 +82,7 @@ sudo ./Downloads/BigBagKbdTrixXKB/install-dreymar-xmod.sh
 
 mkdir -p ~/.local/share/fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/JetBrainsMono.zip ~/.local/share/fonts
-unzip ~/.local/share/fonts/JetBrainsMono.zip -d ~/.local/share/fonts
+7z x ~/.local/share/fonts/JetBrainsMono.zip -o$HOME/.local/share/fonts
 
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
