@@ -1,5 +1,11 @@
 #!/bin/bash
 
+read -rp "Sure? [y/N]: " sure
+
+if [[ $sure != 'y' ]]; then
+  exit 0
+fi
+
 set -e
 set -x
 
