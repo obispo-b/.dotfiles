@@ -70,6 +70,7 @@ rm -rf ~/.local/share/nvim
 rm -rf ~/.bashrc
 rm -rf ~/.zshrc
 rm -rf ~/.dotfiles
+rm -rf ~/Downloads/BigBagKbdTrixXKB
 
 git clone https://github.com/obispobruno/nvim-config.git ~/.config/nvim
 git clone --bare https://github.com/obispobruno/.dotfiles.git ~/.dotfiles
@@ -78,7 +79,7 @@ git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME config --local status.showUntra
 
 
 git clone https://github.com/DreymaR/BigBagKbdTrixXKB.git ~/Downloads/BigBagKbdTrixXKB
-sudo ./Downloads/BigBagKbdTrixXKB/install-dreymar-xmod.sh
+sudo ~/Downloads/BigBagKbdTrixXKB/install-dreymar-xmod.sh
 
 mkdir -p ~/.local/share/fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/JetBrainsMono.zip ~/.local/share/fonts
