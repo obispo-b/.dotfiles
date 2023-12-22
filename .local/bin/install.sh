@@ -71,6 +71,7 @@ rm -rf ~/.bashrc
 rm -rf ~/.zshrc
 rm -rf ~/.dotfiles
 rm -rf ~/Downloads/BigBagKbdTrixXKB
+rm -rf ~/README.md
 
 git clone https://github.com/obispobruno/nvim-config.git ~/.config/nvim
 git clone --bare https://github.com/obispobruno/.dotfiles.git ~/.dotfiles
