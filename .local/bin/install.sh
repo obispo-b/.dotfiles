@@ -69,6 +69,7 @@ rm -rf ~/.local/share/nvim
 rm -rf ~/.bashrc
 rm -rf ~/.zshrc
 rm -rf ~/.config/i3
+rm -rf ~/.dotfiles
 
 git clone https://github.com/obispobruno/nvim-config.git ~/.config/nvim
 git clone --bare https://github.com/obispobruno/.dotfiles.git ~/.dotfiles
