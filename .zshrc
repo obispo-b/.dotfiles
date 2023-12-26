@@ -58,3 +58,4 @@ alias code="flatpak run com.visualstudio.code"
 alias cfg='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME' 
 
 export PATH="$PATH:/home/bruno/.local/bin"
+export PATH="$PATH:/var/lib/flatpak/exports/bin"

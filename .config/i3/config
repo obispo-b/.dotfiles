@@ -6,19 +6,20 @@ set $left n
 set $down e
 set $up i
 set $right o
-set $menu "rofi -show drun"
+set $menu "j4-dmenu-desktop --term=alacritty"
 set $notifications dunst
 set $screenshot "scrot -M 0 '%d-%m-%Y-%H:%M:%S.png' -e 'mv $f ~/Pictures/Screenshots/'"
 set $screenclip "scrot --select --freeze --line mode=edge '%Y:%m:%d-%H:%M:%S.png' -e 'xclip -selection clipboard -t image/png -i $f && rm $f'"
 set $savescreenclip "scrot --select --freeze --line mode=edge '%Y:%m:%d-%H:%M:%S.png' -e 'mv $f ~/Pictures/Screenshots/'"
-set $keyboard_layout "setxkbmap -model 'pc104angle' -layout 'us(cmk_ed_dh)' -option 'misc:extend,lv5:caps_switch_lock,grp:shifts_toggle,compose:menu' -v 9"
+set $colemak "setxkbmap -model 'pc104angle' -layout 'us(cmk_ed_dh)' -option 'misc:extend,lv5:caps_switch_lock,grp:shifts_toggle,compose:menu' -v 9"
+set $qwerty "setxkbmap us && setxkbmap -model 'asus_laptop'"
 set $leave ~/.config/rofi/leave.sh
 set $wallpaper "nitrogen --restore"
 set $terminal "alacritty -e tmux new-session -A -s main"
 set $handwriting "flatpak run com.github.xournalpp.xournalpp"
 set $notes "flatpak run net.cozic.joplin_desktop"
 set $steam "flatpak run com.valvesoftware.Steam"
-set $browser firefox
+set $browser "flatpak run io.gitlab.librewolf-community"
 set $file_explorer "alacritty -e tmux new-session -A -s Ex"
 set $discord "flatpak run com.discordapp.Discord"
 set $rss "newsflash"
@@ -30,6 +31,25 @@ set $polkit /usr/libexec/polkit-gnome-authentication-agent-1
 set $keyring gnome-keyring-daemon --start --components=secrets,ssh,gpg
 set $mutemic "amixer set 'Capture' toggle"
 set $cryptomator "flatpak run org.cryptomator.Cryptomator"
+
+# Autostart
+exec --no-startup-id $keyring
+exec --no-startup-id "syncthing -no-browser"
+exec --no-startup-id dex-autostart --autostart --environment i3
+exec systemctl --user import-environment
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id $polkit
+exec_always --no-startup-id $colemak 
+exec_always --no-startup-id "systemctl --user start onedrive"
+exec_always --no-startup-id $wallpaper
+exec --no-startup-id $discord
+exec --no-startup-id $whatsapp
+exec --no-startup-id $email
+exec --no-startup-id $notifications
+exec_always --no-startup-id 'xsetwacom --set "Wacom One by Wacom S Pen stylus" MapToOutput HEAD-0'
+exec_always --no-startup-id 'xinput set-prop "Sony Interactive Entertainment Wireless Controller Touchpad" "Device Enabled" 0'
+exec "picom -b"
+exec --no-startup-id $cryptomator
 
 # Keybindings
 bindsym $mod+Return exec $terminal
@@ -51,6 +71,7 @@ bindsym Print exec $screenshot
 bindsym --release Shift+Print exec $screenclip
 bindsym --release $mod+Shift+Print exec $savescreenclip
 bindsym $mod+Shift+M exec $mutemic
+bindsym $mod+Shift+Q exec --no-startup-id $qwerty
 
 # Workspaces
 set $ws1 "1"
@@ -81,25 +102,6 @@ assign [class="Jellyfin Media Player"] 6
 # assign [class="FreeTube"] 6
 # assign [class="FileZilla"] 8
 assign [class="KeePassXC"] 10
-
-# Autostart
-exec --no-startup-id $keyring
-exec --no-startup-id "syncthing -no-browser"
-exec --no-startup-id dex-autostart --autostart --environment i3
-exec systemctl --user import-environment
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-exec --no-startup-id $polkit
-exec_always --no-startup-id $keyboard_layout 
-exec_always --no-startup-id "systemctl --user start onedrive"
-exec_always --no-startup-id $wallpaper
-exec --no-startup-id $discord
-exec --no-startup-id $whatsapp
-exec --no-startup-id $email
-exec --no-startup-id $notifications
-exec_always --no-startup-id 'xsetwacom --set "Wacom One by Wacom S Pen stylus" MapToOutput HEAD-0'
-exec_always --no-startup-id 'xinput set-prop "Sony Interactive Entertainment Wireless Controller Touchpad" "Device Enabled" 0'
-exec "picom -b"
-exec --no-startup-id $cryptomator
 
 # Font
 font pango:JetBrains Mono Nerd Font 10
@@ -220,27 +222,27 @@ bindsym $mod+Shift+F exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
+# These bindings trigger as soon as you enter the resize mode
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym n resize shrink width 10 px or 10 ppt
-        bindsym e resize grow height 10 px or 10 ppt
-        bindsym i resize shrink height 10 px or 10 ppt
-        bindsym o resize grow width 10 px or 10 ppt
+# Pressing left will shrink the window’s width.
+# Pressing right will grow the window’s width.
+# Pressing up will shrink the window’s height.
+# Pressing down will grow the window’s height.
+  bindsym n resize shrink width 10 px or 10 ppt
+    bindsym e resize grow height 10 px or 10 ppt
+    bindsym i resize shrink height 10 px or 10 ppt
+    bindsym o resize grow width 10 px or 10 ppt
 
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+# same bindings, but for the arrow keys
+    bindsym Left resize shrink width 10 px or 10 ppt
+    bindsym Down resize grow height 10 px or 10 ppt
+    bindsym Up resize shrink height 10 px or 10 ppt
+    bindsym Right resize grow width 10 px or 10 ppt
 
-        # back to normal: Enter or Escape or $mod+r
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-        bindsym $mod+p mode "default"
+# back to normal: Enter or Escape or $mod+r
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+p mode "default"
 }
 
 bindsym $mod+p mode "resize"
@@ -255,22 +257,22 @@ client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
 
 client.background       #FFFFFF
 
-bar {
-  height 18
-  status_command i3status --config ~/.config/i3/i3status.conf
-  position top
-  tray_output primary
-  colors {
-    background #000000
-    statusline #FFFFFF
-    separator  #666666
-    focused_workspace  #83CAFA #51A2DA #FFFFFF
-    active_workspace   #3C6EB4 #294172 #FFFFFF
-    inactive_workspace #8C8C8C #4C4C4C #888888
-    urgent_workspace   #EC69A0 #DB3279 #FFFFFF
-    binding_mode       #b691d3 #A07CBC #FFFFFF
-  }
-}
+# bar {
+#   height 18
+#   status_command i3status --config ~/.config/i3/i3status.conf
+#   position top
+#   tray_output primary
+#   colors {
+#     background #000000
+#     statusline #FFFFFF
+#     separator  #666666
+#     focused_workspace  #83CAFA #51A2DA #FFFFFF
+#     active_workspace   #3C6EB4 #294172 #FFFFFF
+#     inactive_workspace #8C8C8C #4C4C4C #888888
+#     urgent_workspace   #EC69A0 #DB3279 #FFFFFF
+#     binding_mode       #b691d3 #A07CBC #FFFFFF
+#   }
+# }
 
 # Border gaps
 gaps outer 0

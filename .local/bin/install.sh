@@ -3,7 +3,7 @@
 read -rp "Sure? [y/N]: " sure
 
 if [[ $sure != 'y' ]]; then
-  exit 0
+	exit 0
 fi
 
 set -e
@@ -26,7 +26,10 @@ yes | sudo dnf copr enable petersen/haskell-language-server
 sudo dnf install -y \
 	git \
 	vim \
+	ncdu \
 	zsh \
+	cargo \
+	rust \
 	tmux \
 	htop \
 	wget \
