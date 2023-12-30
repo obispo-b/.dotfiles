@@ -1,8 +1,8 @@
 {
-	"layer": "top",
+	"layer": "bottom",
 	"modules-left": ["custom/power","clock#date","clock#time","custom/media"],
 	"modules-center": ["sway/workspaces"],
-	"modules-right": ["custom/updates","backlight","pulseaudio","battery","bluetooth","network","tray"],
+	"modules-right": ["custom/updates","backlight","pulseaudio","battery","tray"],
 
 	"bluetooth": {
 	// "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
@@ -105,38 +105,5 @@
 //        },
         "all-outputs": false,
     },
-    "custom/media": {
-        "interval": 30,
-        "format": "{icon} {}",
-        "return-type": "json",
-        "max-length": 20,
-        "format-icons": {
-            "spotify": " ",
-            "default": " "
-        },
-        "escape": true,
-        "exec": "$HOME/.config/system_scripts/mediaplayer.py 2> /dev/null",
-        "on-click": "playerctl play-pause"
-    },
-    "custom/launcher":{
-        "format": " ",
-        "on-click": "rofi -show drun",
-        "on-click-right": "killall rofi"
-    },
-    "custom/power":{
-        "format": "⏻ ",
-        "on-click": "~/.config/rofi/leave.sh",
-    },
-"custom/updates":{
-        "format": "{} Update(s)",
-        "exec": "checkupdates | wc -l",
-        "exec-if": "[[ $(checkupdates | wc -l) != 0 ]]",
-        "interval": 1800,
-        "on-click": "kitty paru && notify-send 'The system has been updated' && pkill waybar && waybar"
-    },
-    "custom/wallpaper":{
-        "format":" ",
-        "on-click": "bash ~/.config/system_scripts/pkill_bc"
-    }
 }
 
