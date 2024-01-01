@@ -104,7 +104,7 @@ assign [class="Jellyfin Media Player"] 6
 assign [class="KeePassXC"] 10
 
 # Font
-font pango:JetBrains Mono Nerd Font 10
+font pango:JetBrains Mono Nerd Font 9
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -257,22 +257,22 @@ client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
 
 client.background       #FFFFFF
 
-# bar {
-#   height 18
-#   status_command i3status --config ~/.config/i3/i3status.conf
-#   position top
-#   tray_output primary
-#   colors {
-#     background #000000
-#     statusline #FFFFFF
-#     separator  #666666
-#     focused_workspace  #83CAFA #51A2DA #FFFFFF
-#     active_workspace   #3C6EB4 #294172 #FFFFFF
-#     inactive_workspace #8C8C8C #4C4C4C #888888
-#     urgent_workspace   #EC69A0 #DB3279 #FFFFFF
-#     binding_mode       #b691d3 #A07CBC #FFFFFF
-#   }
-# }
+bar {
+  height 14
+  status_command i3status --config ~/.config/i3/i3status.conf
+  position top
+  tray_output primary
+  colors {
+    background #000000
+    statusline #FFFFFF
+    separator  #666666
+    focused_workspace  #83CAFA #51A2DA #FFFFFF
+    active_workspace   #3C6EB4 #294172 #FFFFFF
+    inactive_workspace #8C8C8C #4C4C4C #888888
+    urgent_workspace   #EC69A0 #DB3279 #FFFFFF
+    binding_mode       #b691d3 #A07CBC #FFFFFF
+  }
+}
 
 # Border gaps
 gaps outer 0
