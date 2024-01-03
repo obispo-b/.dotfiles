@@ -30,6 +30,7 @@ sudo dnf install -y \
 	zsh \
 	cargo \
 	rust \
+  rust-analyzer \
 	tmux \
 	htop \
 	wget \
