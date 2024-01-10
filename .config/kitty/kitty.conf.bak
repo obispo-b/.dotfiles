@@ -1,10 +1,16 @@
-font_family      JetBrainsMono NF Medium
+font_family      JetBrainsMono NF Regular
 bold_font        JetBrainsMono NF Bold
-italic_font      JetBrainsMono NF Medium Italic
-bold_italic_font JetBrainsMono NF Bold Italic
-font_size 14
+italic_font      JetBrainsMono NF Italic
+bold_italic_font JetBrainsMono NF BoldItalic
+font_size 16
 
 # BEGIN_KITTY_THEME
-# One Half Dark
+# Broadcast
 include current-theme.conf
 # END_KITTY_THEME
+
+window_padding_width 0
+resize_in_steps yes
+window_margin_width 0
+
+confirm_os_window_close 0

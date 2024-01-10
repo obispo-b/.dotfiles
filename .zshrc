@@ -1,20 +1,14 @@
-# If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+source ~/.config/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+source ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
+source ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 
 # Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
-
-source ~/.oh-my-zsh/custom/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+export ZSH="$HOME/.config/zsh/oh-my-zsh/"
 
 ZSH_THEME="robbyrussell"
 
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-  sudo
-  zsh-autosuggestions
-  zsh-syntax-highlighting
-  dnf
-)
+# plugins=()
 
 source $ZSH/oh-my-zsh.sh
 
@@ -44,18 +38,10 @@ zle -N zle-line-init
 echo -ne '\e[5 q' # Use beam shape cursor on startup.
 preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
-export EDITOR='nvim'
 eval "$(zoxide init zsh)"
-alias fpki="flatpak install"
-alias fpks="flatpak search"
-alias fpkr="flatpak uninstall"
-alias fpkl="flatpak list"
-alias fpku="flatpak update"
-alias v="nvim"
-alias qw="setxkbmap us && setxkbmap -model 'asus_laptop'"
-alias w='wl-copy'
-alias code="flatpak run com.visualstudio.code"
-alias cfg='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME' 
 
+source ~/.config/zsh/aliases.zsh
+export EDITOR=nvim
 export PATH="$PATH:/home/bruno/.local/bin"
 export PATH="$PATH:/var/lib/flatpak/exports/bin"
+export PATH=$HOME/bin:/usr/local/bin:$PATH

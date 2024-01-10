@@ -74,6 +74,8 @@ sudo dnf install -y \
 	pandoc \
 	texlive
 
+sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/bin/alacritty 50
+
 rm -rf ~/.config
 rm -rf ~/.local/bin
 rm -rf ~/.local/share/nvim

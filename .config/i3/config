@@ -15,7 +15,8 @@ set $colemak "setxkbmap -model 'pc104angle' -layout 'us(cmk_ed_dh)' -option 'mis
 set $qwerty "setxkbmap us && setxkbmap -model 'asus_laptop'"
 set $leave ~/.local/bin/leave.sh 
 set $wallpaper "nitrogen --restore"
-set $terminal "alacritty -e tmux new-session -A -s main"
+# set $terminal "alacritty -e tmux new-session -A -s main"
+set $terminal "kitty tmux new-session -A -s main"
 set $handwriting "flatpak run com.github.xournalpp.xournalpp"
 set $notes "flatpak run net.cozic.joplin_desktop"
 set $steam "flatpak run com.valvesoftware.Steam"

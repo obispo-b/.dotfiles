@@ -1,6 +1,5 @@
 [shell]
 program = "/bin/zsh"
-live_config_reload = true
 
 [env]
 WINIT_X11_SCALE_FACTOR = "1.0"
@@ -11,25 +10,23 @@ padding = { x = 0, y = 0 }
 dynamic_padding = true
 opacity = 1.0
 dynamic_title = false
-decorations = Full
+decorations = "Full"
 
 [scrolling]
 history = 0
 
 [font]
-size = 14.0
-normal = ["JetBrains Mono Nerd Font", "Medium" ]
-bold = ["JetBrains Mono Nerd Font", "Bold" ]
-italic = ["JetBrains Mono Nerd Font", "Italic" ]
-bold_italic = ["JetBrains Mono Nerd Font", "Bold Italic" ]
-offset = { x = 0, y = -1 }
+size = 15.0
+normal = { family = "JetBrains Mono Nerd Font", style = "Medium" }
+bold = { family = "JetBrains Mono Nerd Font", style = "Bold" }
+italic = { family = "JetBrains Mono Nerd Font", style = "Italic" }
+bold_italic = { family = "JetBrains Mono Nerd Font", style = "Bold Italic" }
+offset = { x = -1, y = -2 }
 
 [colors]
 [colors.primary]
 background = "0x282828"
 foreground = "0xd1d5da"
-indexed_colors = [16, "0xd18616"]
-indexed_colors = [17, "0xf14c4c"]
 
 [colors.normal]
 black = "0x24292e"
