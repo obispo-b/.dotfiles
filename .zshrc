@@ -2,16 +2,6 @@ source ~/.config/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 source ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 source ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.config/zsh/oh-my-zsh/"
-
-ZSH_THEME="robbyrussell"
-
-# Add wisely, as too many plugins slow down shell startup.
-# plugins=()
-
-source $ZSH/oh-my-zsh.sh
-
 autoload -U compinit
 zstyle ':completion:*' menu select
 zmodload zsh/complist
@@ -39,9 +29,12 @@ echo -ne '\e[5 q' # Use beam shape cursor on startup.
 preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
 eval "$(zoxide init zsh)"
+eval "$(starship init zsh)"
 
 source ~/.config/zsh/aliases.zsh
+source ~/.config/zsh/opts.zsh 
 export EDITOR=nvim
 export PATH="$PATH:/home/bruno/.local/bin"
+export PATH="$PATH:/home/bruno/.cargo/bin"
 export PATH="$PATH:/var/lib/flatpak/exports/bin"
 export PATH=$HOME/bin:/usr/local/bin:$PATH

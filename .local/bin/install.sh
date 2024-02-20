@@ -9,7 +9,7 @@ fi
 set -e
 set -x
 
-sudo hostnamectl set-hostname "bruno"
+# sudo hostnamectl set-hostname ""
 
 faster_dnf="fastestmirror=True
 max_parallel_downloads=10
@@ -60,6 +60,8 @@ sudo dnf install -y \
 	onedrive \
 	playerctl \
 	syncthing \
+  grim \
+  wlr-randr \
 	zoxide \
 	gh \
 	lf \
@@ -120,15 +122,11 @@ if [[ $flat != 'n' ]]; then
 		io.mpv.Mpv \
 		net.cozic.joplin_desktop \
 		net.davidotek.pupgui2 \
-		com.valvesoftware.Steam.CompatibilityTool.Proton-GE \
 		org.pulseaudio.pavucontrol
 fi
 
-rm -rf ~/.oh-my-zsh/
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
-git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git ~/.oh-my-zsh/custom/plugins/zsh-autocomplete
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.config/zsh/plugins/zsh-syntax-highlighting/
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.config/zsh/plugins/zsh-autosuggestions
+git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git ~/.config/zsh/plugins/zsh-autocomplete
 
-rm -rf ~/.zshrc
-mv ~/.zshrc.pre-oh-my-zsh ~/.zshrc
+pip install yewtube
