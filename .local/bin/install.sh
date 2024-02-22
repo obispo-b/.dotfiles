@@ -122,7 +122,8 @@ if [[ $flat != 'n' ]]; then
 		io.mpv.Mpv \
 		net.cozic.joplin_desktop \
 		net.davidotek.pupgui2 \
-		org.pulseaudio.pavucontrol
+		org.pulseaudio.pavucontrol \
+    org.qbittorrent.qBittorrent
 fi
 
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.config/zsh/plugins/zsh-syntax-highlighting/
