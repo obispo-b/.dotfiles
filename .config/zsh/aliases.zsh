@@ -16,6 +16,7 @@ alias dnfr="sudo dnf remove"
 alias dnfu="sudo dnf upgrade"
 alias dnfur="sudo dnf upgrade --refresh"
 alias dnfcu="dnf check-update"
+alias dnfcur="dnf check-update --refresh"
 
 # General
 alias v="nvim"
