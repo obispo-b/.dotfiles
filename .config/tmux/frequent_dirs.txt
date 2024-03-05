@@ -15,4 +15,3 @@
 ~/.local/share/Cryptomator/mnt/ORT-/Semestre\ 4/Optimización\ con\ álgebra\ lineal/
 ~/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/
 ~/.var/app/com.valvesoftware.Steam/.local/share/Steam/
-~/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Counter-Strike\ Global\ Offensive/game/csgo/
