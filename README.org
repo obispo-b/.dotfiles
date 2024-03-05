@@ -1,35 +1,35 @@
-## How to setup
+* How to setup
 
 1. Define alias
 
-```bash
+#+begin_src bash
 alias cfg='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-```
+#+end_src
 
 2. Clone the repo
 
-```bash
+#+begin_src bash
 git clone --bare https://github.com/obispobruno/.dotfiles.git ~/.dotfiles
-```
+#+end_src
 
 3. Checkout content to home
 
-```bash
+#+begin_src bash
 cfg checkout
-```
+#+end_src
 
 4. Hide untracked files
 
-```bash
+#+begin_src bash
 cfg config --local status.showUntrackedFiles no
-```
+#+end_src
 
 - In case of this error remove listed files
 
-```bash
+#+begin_src bash
 error: The following untracked working tree files would be overwritten by checkout:
     .bashrc
     .zshrc
 Please move or remove them before you can switch branches.
 Aborting
-```
+#+end_src
