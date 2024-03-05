@@ -1,8 +1,8 @@
+/
 ~/
 ~/Personal/
 ~/Syncthing/
 ~/.config/
-/
 ~/.local/share/Cryptomator/mnt/ORT-/
 ~/.local/share/Cryptomator/mnt/ORT-/Semestre\ 1/
 ~/.local/share/Cryptomator/mnt/ORT-/Semestre\ 2/
