@@ -1,0 +1,14 @@
+[[manager.append_keymap]]
+on   = [ "g", "o" ]
+exec = 'cd ~/.local/share/Cryptomator/mnt/ORT-/'
+desc = "Go to onedrive dir"
+
+[[manager.prepend_keymap]]
+on   = [ "g", "t" ]
+exec = 'cd ~/.local/share/Trash/files/'
+desc = "Go to trash"
+
+[[manager.append_keymap]]
+on   = [ "g", "T" ]
+exec = 'cd /tmp'
+desc = "Go to tmp dir"
