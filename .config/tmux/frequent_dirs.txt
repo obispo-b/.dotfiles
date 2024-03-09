@@ -8,10 +8,11 @@
 ~/.local/share/Cryptomator/mnt/ORT-/Semestre\ 2/
 ~/.local/share/Cryptomator/mnt/ORT-/Semestre\ 3/
 ~/.local/share/Cryptomator/mnt/ORT-/Semestre\ 4/
-~/.local/share/Cryptomator/mnt/ORT-/Semestre\ 4/FIS/
-~/.local/share/Cryptomator/mnt/ORT-/Semestre\ 4/Algoritmos\ 2/
-~/.local/share/Cryptomator/mnt/ORT-/Semestre\ 4/Base\ de\ datos\ 1/
-~/.local/share/Cryptomator/mnt/ORT-/Semestre\ 4/Sistemas\ Operativos/
-~/.local/share/Cryptomator/mnt/ORT-/Semestre\ 4/Optimización\ con\ álgebra\ lineal/
+~/.local/share/Cryptomator/mnt/ORT-/Semestre\ 5/
+~/.local/share/Cryptomator/mnt/ORT-/Semestre\ 5/Teoría/
+~/.local/share/Cryptomator/mnt/ORT-/Semestre\ 5/AdminGeneral/
+~/.local/share/Cryptomator/mnt/ORT-/Semestre\ 5/Redes/
+~/.local/share/Cryptomator/mnt/ORT-/Semestre\ 5/Diseño1/
+~/.local/share/Cryptomator/mnt/ORT-/Semestre\ 5/BD2/
 ~/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/
 ~/.var/app/com.valvesoftware.Steam/.local/share/Steam/
