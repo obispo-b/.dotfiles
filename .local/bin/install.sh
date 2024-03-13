@@ -76,7 +76,7 @@ sudo dnf install -y \
 	pandoc \
 	texlive
 
-sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/bin/alacritty 50
+curl -sS https://starship.rs/install.sh | sh
 
 rm -rf ~/.config
 rm -rf ~/.local/bin
