@@ -28,7 +28,7 @@ set $cryptomator "flatpak run org.cryptomator.Cryptomator"
 exec "syncthing -no-browser"
 exec nm-applet
 exec blueman-applet
-exec_always "pkill onedrive && systemctl --user start onedrive"
+# exec_always "systemctl --user start onedrive"
 exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec $polkit
