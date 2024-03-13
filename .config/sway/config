@@ -19,7 +19,7 @@ set $steam "steam"
 set $freetube "flatpak run io.freetubeapp.FreeTube"
 set $jellyfin "flatpak run com.github.iwalton3.jellyfin-media-player"
 set $email "flatpak run com.tutanota.Tutanota"
-set $whatsapp "flatpak run io.github.mimbrero.WhatsAppDesktop"
+set $whatsapp "flatpak run com.github.eneshecan.WhatsAppForLinux"
 set $polkit /usr/libexec/polkit-gnome-authentication-agent-1
 set $wallpaper ~/Pictures/Wallpapers/green.jpg
 set $lock ~/.config/sway/lock
@@ -28,8 +28,6 @@ set $cryptomator "flatpak run org.cryptomator.Cryptomator"
 
 # Autostart
 exec "syncthing -no-browser"
-# exec nm-applet
-# exec blueman-applet
 exec_always "systemctl --user start onedrive"
 exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
@@ -159,6 +157,7 @@ assign [class="Joplin"] 4
 assign [class="steam"] 7
 assign [class="gamescope"] 8
 assign [class="Whatsapp-for-linux"] 5
+assign [class="whatsapp-for-linux"] 5
 assign [class="whatsapp-desktop-linux"] 5
 assign [class="teams-for-linux"] 5
 assign [class="discord"] 5
