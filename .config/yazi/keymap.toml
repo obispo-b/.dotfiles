@@ -1,6 +1,6 @@
 [[manager.append_keymap]]
 on   = [ "g", "o" ]
-exec = 'cd ~/.local/share/Cryptomator/mnt/ORT-/'
+exec = 'cd ~/.local/share/Cryptomator/mnt/ORT-/Semestre 5/'
 desc = "Go to onedrive dir"
 
 [[manager.prepend_keymap]]
