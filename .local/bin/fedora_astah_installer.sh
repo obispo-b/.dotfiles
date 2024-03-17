@@ -7,7 +7,7 @@ enabled=1
 gpgcheck=1
 gpgkey=https://packages.adoptium.net/artifactory/api/gpg/key/public"
 
-echo "$adoptiumrepo" > /etc/yum.repos.d/adoptium.repo
+echo "$adoptiumrepo" | sudo tee /etc/yum.repos.d/adoptium.repo >/dev/null
 
 sudo dnf install -y temurin-8-jdk
 
