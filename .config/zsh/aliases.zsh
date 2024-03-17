@@ -21,6 +21,7 @@ alias dnfcur="dnf check-update --refresh"
 # General
 alias v="nvim"
 alias code="flatpak run com.visualstudio.code"
+alias rider="flatpak run com.jetbrains.Rider"
 alias qw="setxkbmap us && setxkbmap -model 'asus_laptop'"
 alias w='wl-copy'
 alias cfg='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME' 
