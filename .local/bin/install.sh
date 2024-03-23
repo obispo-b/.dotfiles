@@ -18,6 +18,8 @@ keepcache=True"
 
 echo "$faster_dnf" | sudo tee -a /etc/dnf/dnf.conf >/dev/null
 
+sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+
 sudo dnf upgrade -y
 
 yes | sudo dnf copr enable pennbauman/ports
@@ -54,6 +56,7 @@ sudo dnf install -y \
 	zathura-pdf-poppler \
 	sxiv \
 	flatpak \
+  eza \
 	alacritty \
 	scrot \
 	rofi \
