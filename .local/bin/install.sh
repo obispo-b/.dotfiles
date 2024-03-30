@@ -18,7 +18,9 @@ keepcache=True"
 
 echo "$faster_dnf" | sudo tee -a /etc/dnf/dnf.conf >/dev/null
 
-sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+sudo dnf install -y \
+	https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
+	https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
 sudo dnf upgrade -y
 
@@ -32,7 +34,7 @@ sudo dnf install -y \
 	zsh \
 	cargo \
 	rust \
-  rust-analyzer \
+	rust-analyzer \
 	tmux \
 	htop \
 	wget \
@@ -56,15 +58,18 @@ sudo dnf install -y \
 	zathura-pdf-poppler \
 	sxiv \
 	flatpak \
-  eza \
+	eza \
 	alacritty \
 	scrot \
+	j4-dmenu-desktop \
+	btop \
+	brightnessctl \
 	rofi \
 	onedrive \
 	playerctl \
 	syncthing \
-  grim \
-  wlr-randr \
+	grim \
+	wlr-randr \
 	zoxide \
 	gh \
 	lf \
@@ -120,13 +125,12 @@ if [[ $flat != 'n' ]]; then
 		org.filezillaproject.Filezilla \
 		com.github.IsmaelMartinez.teams_for_linux \
 		com.github.xournalpp.xournalpp \
-		com.valvesoftware.Steam \
 		io.github.mimbrero.WhatsAppDesktop \
 		io.mpv.Mpv \
 		net.cozic.joplin_desktop \
 		net.davidotek.pupgui2 \
 		org.pulseaudio.pavucontrol \
-    org.qbittorrent.qBittorrent
+		org.qbittorrent.qBittorrent
 fi
 
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.config/zsh/plugins/zsh-syntax-highlighting/
