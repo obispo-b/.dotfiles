@@ -16,6 +16,6 @@ case $choice in
     loginctl lock-session
     ;;
   ' Log out')
-    pkill -KILL -u "$USER"
+    sway exit
     ;;
 esac
