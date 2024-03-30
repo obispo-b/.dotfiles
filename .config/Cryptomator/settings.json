@@ -27,9 +27,9 @@
   "startHidden" : true,
   "uiOrientation" : "LEFT_TO_RIGHT",
   "useKeychain" : true,
-  "windowHeight" : 440,
-  "windowWidth" : 650,
-  "windowXPosition" : 635,
-  "windowYPosition" : 320,
+  "windowHeight" : 1056,
+  "windowWidth" : 636,
+  "windowXPosition" : 2562,
+  "windowYPosition" : 22,
   "lastUpdateCheck" : "2000-01-01"
 }
