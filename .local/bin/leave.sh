@@ -13,7 +13,7 @@ case $choice in
     systemctl poweroff
     ;;
   ' Lock')
-    loginctl lock-session
+    swaylock
     ;;
   ' Log out')
     sway exit
