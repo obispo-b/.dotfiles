@@ -22,10 +22,25 @@ sudo dnf install -y \
 	https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
 	https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
-sudo dnf upgrade -y
-
 yes | sudo dnf copr enable pennbauman/ports
 yes | sudo dnf copr enable petersen/haskell-language-server
+
+sudo dnf remove -y \
+	docker \
+	docker-client \
+	docker-client-latest \
+	docker-common \
+	docker-latest \
+	docker-latest-logrotate \
+	docker-logrotate \
+	docker-selinux \
+	docker-engine-selinux \
+	docker-engine
+
+sudo dnf -y install dnf-plugins-core
+sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
+
+sudo dnf upgrade -y
 
 sudo dnf install -y \
 	git \
@@ -77,12 +92,21 @@ sudo dnf install -y \
 	unrar \
 	kitty \
 	kitty-terminfo \
+  VirtualBox \
 	trash-cli \
 	tldr \
 	ghc \
 	haskell-language-server \
+	sudo usermod -aG docker $USER \
 	pandoc \
-	texlive
+	docker-ce \
+	docker-ce-cli \
+	containerd.io \
+	docker-buildx-plugin \
+	docker-compose-plugin
+
+sudo groupadd docker
+sudo usermod -aG docker $USER
 
 curl -sS https://starship.rs/install.sh | sh
 
