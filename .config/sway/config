@@ -43,7 +43,7 @@ exec $keyring
 bindsym $mod+q kill
 bindsym $mod+Return exec $terminal
 bindsym $mod+space exec $menu
-bindsym $mod+z exec "dmenu_run -fn 'JetBrains Mono Nerd Font-12'"
+bindsym $mod+z exec "dmenu_run -fn 'JetBrains Mono Nerd Font-14'"
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
