@@ -32,5 +32,6 @@ alias la='exa -la'
 alias ll='exa -l'
 alias l='exa -l'
 alias yz='yazi'
+alias fwine="flatpak run org.winehq.Wine"
 alias gpudriver="glxinfo | grep -iE 'vendor:|device:|version:'"
 alias updategrub="sudo grub2-mkconfig -o /boot/grub2/grub.cfg"
