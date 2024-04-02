@@ -18,10 +18,29 @@ keepcache=True"
 
 echo "$faster_dnf" | sudo tee -a /etc/dnf/dnf.conf >/dev/null
 
-sudo dnf upgrade -y
+sudo dnf install -y \
+	https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
+	https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
 yes | sudo dnf copr enable pennbauman/ports
 yes | sudo dnf copr enable petersen/haskell-language-server
+
+sudo dnf remove -y \
+	docker \
+	docker-client \
+	docker-client-latest \
+	docker-common \
+	docker-latest \
+	docker-latest-logrotate \
+	docker-logrotate \
+	docker-selinux \
+	docker-engine-selinux \
+	docker-engine
+
+sudo dnf -y install dnf-plugins-core
+sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
+
+sudo dnf upgrade -y
 
 sudo dnf install -y \
 	git \
@@ -30,7 +49,7 @@ sudo dnf install -y \
 	zsh \
 	cargo \
 	rust \
-  rust-analyzer \
+	rust-analyzer \
 	tmux \
 	htop \
 	wget \
@@ -54,14 +73,18 @@ sudo dnf install -y \
 	zathura-pdf-poppler \
 	sxiv \
 	flatpak \
+	eza \
 	alacritty \
 	scrot \
+	j4-dmenu-desktop \
+	btop \
+	brightnessctl \
 	rofi \
 	onedrive \
 	playerctl \
 	syncthing \
-  grim \
-  wlr-randr \
+	grim \
+	wlr-randr \
 	zoxide \
 	gh \
 	lf \
@@ -69,14 +92,23 @@ sudo dnf install -y \
 	unrar \
 	kitty \
 	kitty-terminfo \
+  VirtualBox \
 	trash-cli \
 	tldr \
 	ghc \
 	haskell-language-server \
+	sudo usermod -aG docker $USER \
 	pandoc \
-	texlive
+	docker-ce \
+	docker-ce-cli \
+	containerd.io \
+	docker-buildx-plugin \
+	docker-compose-plugin
 
-sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/bin/alacritty 50
+sudo groupadd docker
+sudo usermod -aG docker $USER
+
+curl -sS https://starship.rs/install.sh | sh
 
 rm -rf ~/.config
 rm -rf ~/.local/bin
@@ -117,13 +149,12 @@ if [[ $flat != 'n' ]]; then
 		org.filezillaproject.Filezilla \
 		com.github.IsmaelMartinez.teams_for_linux \
 		com.github.xournalpp.xournalpp \
-		com.valvesoftware.Steam \
 		io.github.mimbrero.WhatsAppDesktop \
 		io.mpv.Mpv \
 		net.cozic.joplin_desktop \
 		net.davidotek.pupgui2 \
 		org.pulseaudio.pavucontrol \
-    org.qbittorrent.qBittorrent
+		org.qbittorrent.qBittorrent
 fi
 
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.config/zsh/plugins/zsh-syntax-highlighting/
