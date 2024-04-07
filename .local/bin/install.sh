@@ -133,6 +133,8 @@ wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/do
 7z x ~/.local/share/fonts/JetBrainsMono.zip -o$HOME/.local/share/fonts
 
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak remote-delete fedora
+flatpak remote-delete fedora-testing
 
 read -rp "Install flatpaks? [Y/n] " flat
 
