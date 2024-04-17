@@ -9,7 +9,7 @@
 ~/.local/share/Cryptomator/mnt/ORT-/Semestre\ 3/
 ~/.local/share/Cryptomator/mnt/ORT-/Semestre\ 4/
 ~/.local/share/Cryptomator/mnt/ORT-/Semestre\ 5/
-~/.local/share/Cryptomator/mnt/ORT-/Semestre\ 5/Teoría/
+~/.local/share/Cryptomator/mnt/ORT-/Semestre\ 5/TeoríaComputación/
 ~/.local/share/Cryptomator/mnt/ORT-/Semestre\ 5/AdminGeneral/
 ~/.local/share/Cryptomator/mnt/ORT-/Semestre\ 5/Redes/
 ~/.local/share/Cryptomator/mnt/ORT-/Semestre\ 5/Diseño1/
