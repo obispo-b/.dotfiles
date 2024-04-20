@@ -37,6 +37,7 @@ exec $discord
 exec $whatsapp
 exec $notifications
 exec $steam
+exec $email
 exec swayidle before-sleep swaylock
 exec waybar
 exec swaync
