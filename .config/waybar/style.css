@@ -201,6 +201,12 @@
   /* background-color: #285577; */
 }
 
+#workspaces button.active {
+  /* border-color: #4c7899; */
+  color: white;
+  /* background-color: #285577; */
+}
+
 #workspaces button.urgent {
   border-color: #c9545d;
   color: #c9545d;
