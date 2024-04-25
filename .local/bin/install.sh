@@ -64,19 +64,15 @@ sudo dnf install -y \
 	fd-find \
 	fzf \
 	bat \
-	xclip \
-	xsel \
+  fuzzel \
+  bemenu \
 	neofetch \
 	p7zip \
 	p7zip-plugins \
 	zathura \
 	zathura-pdf-poppler \
-	sxiv \
 	flatpak \
 	eza \
-	alacritty \
-	scrot \
-	j4-dmenu-desktop \
 	btop \
 	brightnessctl \
 	rofi \
@@ -89,15 +85,14 @@ sudo dnf install -y \
 	gh \
 	lf \
 	unzip \
-	unrar \
+	unar \
 	kitty \
 	kitty-terminfo \
-  VirtualBox \
+	VirtualBox \
 	trash-cli \
 	tldr \
 	ghc \
 	haskell-language-server \
-	sudo usermod -aG docker $USER \
 	pandoc \
 	docker-ce \
 	docker-ce-cli \
@@ -109,6 +104,7 @@ sudo groupadd docker
 sudo usermod -aG docker $USER
 
 curl -sS https://starship.rs/install.sh | sh
+cargo install --locked yazi-fm yazi-cli
 
 rm -rf ~/.config
 rm -rf ~/.local/bin
@@ -124,11 +120,11 @@ git clone --bare https://github.com/obispobruno/.dotfiles.git ~/.dotfiles
 git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout
 git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME config --local status.showUntrackedFiles no
 
-git clone https://github.com/DreymaR/BigBagKbdTrixXKB.git ~/Downloads/BigBagKbdTrixXKB
-sudo ~/Downloads/BigBagKbdTrixXKB/install-dreymar-xmod.sh
+git clone https://github.com/DreymaR/BigBagKbdTrixXKB.git /tmp/BigBagKbdTrixXKB
+sudo /tmp/BigBagKbdTrixXKB/install-dreymar-xmod.sh
 
 mkdir -p ~/.local/share/fonts
-wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/JetBrainsMono.zip
+wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsMono.zip
 7z x ~/.local/share/fonts/JetBrainsMono.zip -o$HOME/.local/share/fonts
 
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
@@ -138,7 +134,8 @@ flatpak remote-delete fedora-testing
 read -rp "Install flatpaks? [Y/n] " flat
 
 if [[ $flat != 'n' ]]; then
-	flatpak install -y com.github.tchx84.Flatseal \
+	flatpak install -y \
+		com.github.tchx84.Flatseal \
 		com.discordapp.Discord \
 		org.cryptomator.Cryptomator \
 		io.gitlab.librewolf-community \

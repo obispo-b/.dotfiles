@@ -17,11 +17,11 @@ alias dnfu="sudo dnf upgrade"
 alias dnfur="sudo dnf upgrade --refresh"
 alias dnfcu="dnf check-update"
 alias dnfcur="dnf check-update --refresh"
+alias dnfar="sudo dnf autoremove"
 
 # General
 alias v="nvim"
 alias code="flatpak run com.visualstudio.code"
-alias rider="flatpak run com.jetbrains.Rider"
 alias qw="setxkbmap us && setxkbmap -model 'asus_laptop'"
 alias yz="yazi"
 alias w='wl-copy'
