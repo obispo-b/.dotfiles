@@ -64,19 +64,15 @@ sudo dnf install -y \
 	fd-find \
 	fzf \
 	bat \
-	xclip \
-	xsel \
+  fuzzel \
+  bemenu \
 	neofetch \
 	p7zip \
 	p7zip-plugins \
 	zathura \
 	zathura-pdf-poppler \
-	sxiv \
 	flatpak \
 	eza \
-	alacritty \
-	scrot \
-	j4-dmenu-desktop \
 	btop \
 	brightnessctl \
 	rofi \
