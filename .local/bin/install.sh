@@ -64,20 +64,16 @@ sudo dnf install -y \
 	fd-find \
 	fzf \
 	bat \
-	xclip \
-	xsel \
 	eza \
+  fuzzel \
+  bemenu \
 	neofetch \
 	p7zip \
 	p7zip-plugins \
 	zathura \
 	zathura-pdf-poppler \
-	sxiv \
 	flatpak \
 	eza \
-	alacritty \
-	scrot \
-	j4-dmenu-desktop \
 	btop \
 	brightnessctl \
 	rofi \
@@ -164,5 +160,3 @@ fi
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.config/zsh/plugins/zsh-syntax-highlighting/
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.config/zsh/plugins/zsh-autosuggestions
 git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git ~/.config/zsh/plugins/zsh-autocomplete
-
-pip install yewtube
