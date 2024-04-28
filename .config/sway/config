@@ -66,7 +66,6 @@ bindsym Print exec $clipboard_screenshot
 bindsym $mod+Shift+Print exec $screenshot
 bindsym $mod+b exec $clipboard_screenshot
 bindsym --release Shift+Print exec $screenclip
-bindsym $mod+Shift+Q exec "swaymsg input 2385:5842:Kingston_HyperX_Alloy_FPS_Pro_Mechanical_Gaming_Keyboard xkb_switch_layout 1 && swaymsg input 2385:5842:Kingston_HyperX_Alloy_FPS_Pro_Mechanical_Gaming_Keyboard xkb_model pc104"
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
