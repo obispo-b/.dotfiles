@@ -4,7 +4,7 @@ set $left n
 set $down e
 set $up i
 set $right o
-set $menu "j4-dmenu-desktop --term=kitty"
+set $menu "fuzzel"
 set $screenshot "grim ~/Pictures/Screenshots/$(date +'screenshot_%Y-%m-%d_%H:%M:%S.png')"
 set $clipboard_screenshot "grim - | wl-copy"
 set $screenclip ~/.local/bin/screenclip.sh
@@ -53,7 +53,7 @@ output HDMI-A-1 mode 1920x1080@60hz position 0,0
 bindsym $mod+q kill
 bindsym $mod+Return exec $terminal
 bindsym $mod+space exec $menu
-bindsym $mod+z exec "dmenu_run -fn 'JetBrains Mono Nerd Font-12'"
+bindsym $mod+z exec "bemenu-run"
 bindsym $mod+Shift+W exec $whatsapp
 bindsym $mod+y exec $freetube
 bindsym $mod+Shift+J exec $jellyfin
