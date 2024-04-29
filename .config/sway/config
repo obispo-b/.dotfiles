@@ -9,7 +9,7 @@ set $screenshot "grim ~/Pictures/Screenshots/$(date +'screenshot_%Y-%m-%d_%H:%M:
 set $clipboard_screenshot "grim - | wl-copy"
 set $screenclip ~/.local/bin/screenclip.sh
 set $leave ~/.local/bin/leave.sh
-set $terminal "kitty tmux new-session -A -s main"
+set $terminal "kitty tmux new-session -As main"
 set $notes "flatpak run net.cozic.joplin_desktop"
 set $browser "flatpak run io.gitlab.librewolf-community"
 set $file_explorer "kitty tmux new-session -A -s Ex"
