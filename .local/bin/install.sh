@@ -70,6 +70,7 @@ sudo dnf install -y \
 	neofetch \
 	p7zip \
 	p7zip-plugins \
+  procs \
 	zathura \
 	zathura-pdf-poppler \
 	flatpak \
