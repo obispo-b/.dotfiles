@@ -45,7 +45,7 @@ exec $cryptomator
 exec $keyring
 exec corectrl
 
-# output * background $wallpaper fill
+output * bg /usr/share/backgrounds/default.png fill
 output DP-1 mode 1920x1080@165hz adaptive_sync off position 1920,0
 output HDMI-A-1 mode 1920x1080@60hz position 0,0
 
