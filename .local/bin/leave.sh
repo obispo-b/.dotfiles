@@ -1,6 +1,6 @@
 #!/bin/bash
 
-choice=$(printf '󰤄 Suspend\n Reboot\n Shutdown\n Lock\n Log out' | dmenu -p "" -i -fn 'JetBrains Mono Nerd Font')
+choice=$(printf '󰤄 Suspend\n Reboot\n Shutdown\n Lock\n Log out' | fuzzel -d)
 
 case $choice in
   '󰤄 Suspend')

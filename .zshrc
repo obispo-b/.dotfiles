@@ -38,3 +38,4 @@ export PATH="$PATH:/home/bruno/.local/bin"
 export PATH="$PATH:/home/bruno/.cargo/bin"
 export PATH="$PATH:/var/lib/flatpak/exports/bin"
 export PATH=$HOME/bin:/usr/local/bin:$PATH
+export XDG_DOWNLOAD_DIR="/home/bruno/Downloads/"

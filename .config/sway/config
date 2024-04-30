@@ -4,11 +4,11 @@ set $left n
 set $down e
 set $up i
 set $right o
-set $menu "j4-dmenu-desktop --term=kitty"
+set $menu "rofi -show drun"
 set $screenshot "grim ~/Pictures/Screenshots/$(date +'screenshot_%Y-%m-%d_%H:%M:%S.png')"
 set $clipboard_screenshot "grim - | wl-copy"
 set $screenclip "grim -g "$(slurp -d)" - | wl-copy"
-set $leave ~/.local/bin/leave.sh
+# set $leave ~/.local/bin/leave.sh
 set $terminal "kitty tmux new-session -A -s main"
 set $notes "flatpak run net.cozic.joplin_desktop"
 set $browser "flatpak run io.gitlab.librewolf-community"
@@ -32,7 +32,7 @@ exec blueman-applet
 exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec $polkit
-output * background $wallpaper fill
+output * bg /usr/share/backgrounds/default.png fill
 exec swayidle before-sleep $lock
 exec waybar
 exec swaync
@@ -43,7 +43,6 @@ exec $keyring
 bindsym $mod+q kill
 bindsym $mod+Return exec $terminal
 bindsym $mod+space exec $menu
-bindsym $mod+z exec "dmenu_run -fn 'JetBrains Mono Nerd Font-14'"
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
@@ -56,7 +55,7 @@ bindsym $mod+y exec $freetube
 bindsym $mod+Shift+J exec $jellyfin
 bindsym $mod+l exec $browser
 bindsym $mod+j exec $notes
-bindsym $mod+Shift+S exec $leave
+# bindsym $mod+Shift+S exec $leave
 bindsym $mod+u exec $file_explorer
 bindsym Print exec $screenshot
 bindsym $mod+Shift+Print exec $clipboard_screenshot
