@@ -37,4 +37,4 @@ export EDITOR=nvim
 export PATH="$PATH:/home/bruno/.local/bin"
 export PATH="$PATH:/home/bruno/.cargo/bin"
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-export XDG_DOWNLOAD_DIR="/home/bruno/Downloads/"
+export PATH="/home/linuxbrew/.linuxbrew/opt/binutils/bin:$PATH"
