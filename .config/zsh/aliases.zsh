@@ -27,10 +27,10 @@ alias yz="yazi"
 alias w='wl-copy'
 alias cfg='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME' 
 alias cat='bat'
-alias ls='exa'
-alias la='exa -la'
-alias ll='exa -l'
-alias l='exa -l'
+alias ls='eza'
+alias la='eza -la'
+alias ll='eza -l'
+alias l='eza -l'
 alias yz='yazi'
 alias fwine="flatpak run org.winehq.Wine"
 alias gpudriver="glxinfo | grep -iE 'vendor:|device:|version:'"

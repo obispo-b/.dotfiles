@@ -4,7 +4,7 @@ set $left n
 set $down e
 set $up i
 set $right o
-set $menu "fuzzel"
+set $menu "rofi -show drun"
 set $screenshot "grim ~/Pictures/Screenshots/$(date +'screenshot_%Y-%m-%d_%H:%M:%S.png')"
 set $clipboard_screenshot "grim - | wl-copy"
 set $screenclip ~/.local/bin/screenclip.sh
@@ -22,7 +22,7 @@ set $email "flatpak run com.tutanota.Tutanota"
 # set $whatsapp "flatpak run com.github.eneshecan.WhatsAppForLinux"
 set $whatsapp "flatpak run io.github.mimbrero.WhatsAppDesktop"
 set $polkit /usr/libexec/polkit-gnome-authentication-agent-1
-set $wallpaper ~/Pictures/Wallpapers/green.jpg
+# set $wallpaper ~/Pictures/Wallpapers/green.jpg
 set $lock ~/.config/sway/lock
 set $keyring gnome-keyring-daemon --start --components=secrets,ssh,gpg
 set $cryptomator "flatpak run org.cryptomator.Cryptomator"
@@ -45,7 +45,7 @@ exec $cryptomator
 exec $keyring
 exec corectrl
 
-output * background $wallpaper fill
+# output * background $wallpaper fill
 output DP-1 mode 1920x1080@165hz adaptive_sync off position 1920,0
 output HDMI-A-1 mode 1920x1080@60hz position 0,0
 
