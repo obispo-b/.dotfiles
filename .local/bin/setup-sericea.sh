@@ -1,41 +1,5 @@
 #!/usr/bin/env bash
 
-just install-brew
-
-brew install \
-	git \
-	vim \
-	ncdu \
-	rust \
-	tmux \
-	htop \
-	wget \
-	curl \
-	gcc \
-	neovim \
-	npm \
-	ripgrep \
-	fd \
-	fzf \
-	bat \
-	eza \
-	fastfetch \
-	p7zip \
-	procs \
-	btop \
-	syncthing \
-	zoxide \
-	gh \
-	lf \
-	unzip \
-	unar \
-	trash-cli \
-	tldr \
-	ghc \
-	haskell-language-server \
-	yazi \
-	starship
-
 git clone https://github.com/obispobruno/nvim-config.git ~/.config/nvim
 
 git clone https://github.com/obispobruno/BigBagKbdTrixXKB.git /tmp/BigBagKbdTrixXKB
