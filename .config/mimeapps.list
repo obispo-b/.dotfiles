@@ -26,3 +26,4 @@ application/x-extension-shtml=io.gitlab.librewolf-community.desktop
 application/xhtml+xml=io.gitlab.librewolf-community.desktop
 application/x-extension-xhtml=io.gitlab.librewolf-community.desktop
 application/x-extension-xht=io.gitlab.librewolf-community.desktop
+x-scheme-handler/jetbrains=jetbrains-toolbox.desktop
