@@ -2,6 +2,7 @@
 ~/
 ~/Personal/
 ~/Syncthing/
+~/Repos/
 ~/.config/
 ~/.local/share/Cryptomator/mnt/ORT-/
 ~/.local/share/Cryptomator/mnt/ORT-/Semestre\ 1/

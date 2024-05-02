@@ -37,9 +37,6 @@ brew install \
 	starship
 
 git clone https://github.com/obispobruno/nvim-config.git ~/.config/nvim
-git clone --bare https://github.com/obispobruno/.dotfiles.git ~/.dotfiles
-git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout
-git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME config --local status.showUntrackedFiles no
 
 mkdir -p ~/.config/xkb
 git clone https://github.com/obispobruno/BigBagKbdTrixXKB.git /tmp/BigBagKbdTrixXKB
