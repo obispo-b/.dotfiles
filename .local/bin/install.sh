@@ -126,7 +126,7 @@ git clone https://github.com/DreymaR/BigBagKbdTrixXKB.git /tmp/BigBagKbdTrixXKB
 sudo /tmp/BigBagKbdTrixXKB/install-dreymar-xmod.sh
 
 mkdir -p ~/.local/share/fonts
-wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsMono.zip
+wget -P ~/.local/share/fonts $(curl -sL https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | grep -o 'https://github.com/ryanoasis/nerd-fonts/releases/download/[^"]*' | grep JetBrainsMono.zip)
 7z x ~/.local/share/fonts/JetBrainsMono.zip -o$HOME/.local/share/fonts
 
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
