@@ -1,6 +1,6 @@
 [[manager.append_keymap]]
 on   = [ "g", "o" ]
-run = 'cd ~/.local/share/Cryptomator/mnt/ORT-/Semestre\ 5/'
+run = 'cd ~/.local/share/Cryptomator/mnt/ORT-/'
 desc = "Go to onedrive dir"
 
 [[manager.prepend_keymap]]
