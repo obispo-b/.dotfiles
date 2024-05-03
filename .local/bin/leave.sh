@@ -1,6 +1,6 @@
 #!/bin/bash
 
-choice=$(printf '󰤄 Suspend\n Reboot\n Shutdown\n Lock\n Log out' | dmenu -p "" -i -fn 'JetBrains Mono Nerd Font')
+choice=$(printf '󰤄 Suspend\n Reboot\n Shutdown\n Lock\n Log out' | rofi -dmenu)
 
 case $choice in
   '󰤄 Suspend')
