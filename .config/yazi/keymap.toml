@@ -1,14 +1,14 @@
 [[manager.append_keymap]]
 on   = [ "g", "o" ]
-exec = 'cd ~/.local/share/Cryptomator/mnt/ORT-/Semestre\ 5/'
+run = 'cd ~/.local/share/Cryptomator/mnt/ORT-/Semestre\ 5/'
 desc = "Go to onedrive dir"
 
 [[manager.prepend_keymap]]
 on   = [ "g", "t" ]
-exec = 'cd ~/.local/share/Trash/files/'
+run = 'cd ~/.local/share/Trash/files/'
 desc = "Go to trash"
 
 [[manager.append_keymap]]
 on   = [ "g", "T" ]
-exec = 'cd /tmp'
+run = 'cd /tmp'
 desc = "Go to tmp dir"
