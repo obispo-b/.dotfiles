@@ -1,6 +1,6 @@
 #!/bin/bash
 
-choice=$(printf '󰤄 Suspend\n Reboot\n Shutdown\n Lock\n Log out' | fuzzel -d)
+choice=$(printf '󰤄 Suspend\n Reboot\n Shutdown\n Lock\n Log out' | rofi -dmenu)
 
 case $choice in
   '󰤄 Suspend')

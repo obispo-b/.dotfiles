@@ -25,7 +25,9 @@ alias code="flatpak run com.visualstudio.code"
 alias qw="setxkbmap us && setxkbmap -model 'asus_laptop'"
 alias yz="yazi"
 alias w='wl-copy'
-alias cfg='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME' 
+alias cfg='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME' 
+alias ccm='cfg checkout main'
+alias ccd='cfg checkout desktop'
 alias cat='bat'
 alias ls='eza'
 alias la='eza -la'
