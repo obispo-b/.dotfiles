@@ -48,3 +48,4 @@ export PATH="$PATH:/home/bruno/.cargo/bin"
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="/home/linuxbrew/.linuxbrew/opt/binutils/bin:$PATH"
 export PATH="/home/linuxbrew/.linuxbrew/opt/dotnet@6/bin:$PATH"
+export HOMEBREW_AUTO_UPDATE_SECS=3600
