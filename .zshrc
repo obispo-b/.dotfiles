@@ -30,6 +30,15 @@ zle -N zle-line-init
 echo -ne '\e[5 q' # Use beam shape cursor on startup.
 preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
+function yy() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
 
@@ -39,3 +48,4 @@ export PATH="$PATH:/home/bruno/.cargo/bin"
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="/home/linuxbrew/.linuxbrew/opt/binutils/bin:$PATH"
 export PATH="/home/linuxbrew/.linuxbrew/opt/dotnet@6/bin:$PATH"
+export HOMEBREW_AUTO_UPDATE_SECS=3600
