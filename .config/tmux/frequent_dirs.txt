@@ -2,8 +2,13 @@
 ~/
 ~/Personal/
 ~/Syncthing/
-~/Syncthing/Facultad/Semestre\ 5/
 ~/Syncthing/Facultad/
+~/Syncthing/Facultad/Semestre\ 5/
+~/Syncthing/Facultad/Semestre\ 5/TeoríaComputación/
+~/Syncthing/Facultad/Semestre\ 5/AdminGeneral/
+~/Syncthing/Facultad/Semestre\ 5/Redes/
+~/Syncthing/Facultad/Semestre\ 5/Diseño1/
+~/Syncthing/Facultad/Semestre\ 5/BD2/
 ~/Repos/
 ~/.config/
 ~/.local/share/Cryptomator/mnt/ORT-/
