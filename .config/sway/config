@@ -37,9 +37,9 @@ exec $steam
 exec $email
 exec swayidle before-sleep swaylock
 exec waybar
+exec corectrl
 # exec swaync
 # exec $keyring
-exec corectrl
 
 output * bg /usr/share/backgrounds/default.png fill
 output DP-1 mode 1920x1080@165hz adaptive_sync off position 1920,0
