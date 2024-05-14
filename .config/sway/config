@@ -7,7 +7,7 @@ set $right o
 set $menu "rofi -show drun"
 set $screenshot "grim ~/Pictures/Screenshots/$(date +'screenshot_%Y-%m-%d_%H:%M:%S.png')"
 set $clipboard_screenshot "grim - | wl-copy"
-set $screenclip "grim -g "$(slurp -d)" - | wl-copy"
+set $screenclip ~/.local/bin/screenclip.sh
 set $leave ~/.local/bin/leave.sh
 set $terminal "kitty tmux new-session -A -s main"
 set $notes "flatpak run net.cozic.joplin_desktop"
