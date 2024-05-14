@@ -9,11 +9,10 @@ image/jpeg=imv.desktop
 image/png=imv.desktop
 image/jpg=imv.desktop
 image/gif=mpv.desktop
-video/*=mpv.desktop
-video/gif=mpv.desktop
-video/mp4=mpv.desktop
-video/mkv=mpv.desktop
-video/mkv=mpv.desktop
+video/*=io.mpv.Mpv.desktop
+video/gif=io.mpv.Mpv.desktop
+video/mp4=io.mpv.Mpv.desktop
+video/mkv=io.mpv.Mpv.desktop
 application/gzip=com.github.xournalpp.xournalpp.desktop
 x-scheme-handler/http=io.gitlab.librewolf-community.desktop
 x-scheme-handler/https=io.gitlab.librewolf-community.desktop
@@ -27,3 +26,6 @@ application/xhtml+xml=io.gitlab.librewolf-community.desktop
 application/x-extension-xhtml=io.gitlab.librewolf-community.desktop
 application/x-extension-xht=io.gitlab.librewolf-community.desktop
 x-scheme-handler/jetbrains=jetbrains-toolbox.desktop
+
+[Added Associations]
+application/pdf=io.gitlab.librewolf-community.desktop;
