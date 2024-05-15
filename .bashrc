@@ -1,5 +1,6 @@
 # .bashrc
 
+eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 # Source global definitions
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc

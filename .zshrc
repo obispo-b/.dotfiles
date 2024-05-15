@@ -1,8 +1,16 @@
+eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 source /home/linuxbrew/.linuxbrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 source /home/linuxbrew/.linuxbrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /home/linuxbrew/.linuxbrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.config/zsh/aliases.zsh
 source ~/.config/zsh/opts.zsh 
+
+export PATH="$PATH:/home/bruno/.local/bin"
+export PATH="$PATH:/home/bruno/.cargo/bin"
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH="/home/linuxbrew/.linuxbrew/opt/binutils/bin:$PATH"
+export PATH="/home/linuxbrew/.linuxbrew/opt/dotnet@6/bin:$PATH"
+export HOMEBREW_AUTO_UPDATE_SECS=1800
 
 bindkey -v
 
@@ -18,9 +26,3 @@ function yy() {
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
 export EDITOR=nvim
-export PATH="$PATH:/home/bruno/.local/bin"
-export PATH="$PATH:/home/bruno/.cargo/bin"
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH="/home/linuxbrew/.linuxbrew/opt/binutils/bin:$PATH"
-export PATH="/home/linuxbrew/.linuxbrew/opt/dotnet@6/bin:$PATH"
-export HOMEBREW_AUTO_UPDATE_SECS=1800

@@ -4,16 +4,17 @@ set $left n
 set $down e
 set $up i
 set $right o
-set $menu "rofi -terminal kitty -show combi -combi-modes drun#run -modes combi"
+set $term foot
+set $menu rofi -terminal $term -show combi -combi-modes drun#run -modes combi
 set $screenshot "grim ~/Pictures/Screenshots/$(date +'screenshot_%Y-%m-%d_%H:%M:%S.png')"
 set $clipboard_screenshot "grim - | wl-copy"
 set $screenclip ~/.local/bin/screenclip.sh
 set $leave ~/.local/bin/leave.sh
 # set $terminal "kitty tmux new-session -As main"
-set $terminal "foot tmux new-session -As main"
+set $terminal $term tmux new-session -As main
 set $notes "flatpak run net.cozic.joplin_desktop"
 set $browser "flatpak run io.gitlab.librewolf-community"
-set $file_explorer "foot tmux new-session -As Ex"
+set $file_explorer $term tmux new-session -As Ex
 # set $discord "flatpak run io.github.spacingbat3.webcord"
 # set $discord "flatpak run com.discordapp.Discord"
 set $discord "flatpak run dev.vencord.Vesktop"
