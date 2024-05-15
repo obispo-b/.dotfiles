@@ -5,6 +5,7 @@ source /home/linuxbrew/.linuxbrew/share/zsh-syntax-highlighting/zsh-syntax-highl
 source ~/.config/zsh/aliases.zsh
 source ~/.config/zsh/opts.zsh 
 
+export FPATH="$FPATH:/home/linuxbrew/.linuxbrew/share/zsh/site-functions"
 export PATH="$PATH:/home/bruno/.local/bin"
 export PATH="$PATH:/home/bruno/.cargo/bin"
 export PATH=$HOME/bin:/usr/local/bin:$PATH
