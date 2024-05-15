@@ -17,7 +17,6 @@ function yy() {
 
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
-
 export EDITOR=nvim
 export PATH="$PATH:/home/bruno/.local/bin"
 export PATH="$PATH:/home/bruno/.cargo/bin"
