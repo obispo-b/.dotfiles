@@ -30,8 +30,9 @@ set $lock ~/.config/sway/lock
 set $keyring gnome-keyring-daemon --start --components=secrets,ssh,gpg
 
 # Autostart
-exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+exec dbus-update-activation-environment DISPLAY
 # exec $polkit
 exec $discord
 exec $whatsapp
