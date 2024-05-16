@@ -4,9 +4,9 @@ set $left n
 set $down e
 set $up i
 set $right o
-set $term foot
+set $term kitty
 set $menu rofi -terminal $term -show combi -combi-modes drun#run -modes combi
-set $screenshot "grim ~/Pictures/Screenshots/$(date +'screenshot_%Y-%m-%d_%H:%M:%S.png')"
+set $screenshot ~/.local/bin/screenshot.sh
 set $clipboard_screenshot "grim - | wl-copy"
 set $screenclip ~/.local/bin/screenclip.sh
 set $leave ~/.local/bin/leave.sh

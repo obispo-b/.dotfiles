@@ -26,6 +26,8 @@ application/xhtml+xml=io.gitlab.librewolf-community.desktop
 application/x-extension-xhtml=io.gitlab.librewolf-community.desktop
 application/x-extension-xht=io.gitlab.librewolf-community.desktop
 x-scheme-handler/jetbrains=jetbrains-toolbox.desktop
+application/vnd.jgraph.mxfile=com.jgraph.drawio.desktop
 
 [Added Associations]
 application/pdf=io.gitlab.librewolf-community.desktop;
+application/vnd.jgraph.mxfile=com.jgraph.drawio.desktop;
