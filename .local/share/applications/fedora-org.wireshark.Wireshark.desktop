@@ -102,7 +102,7 @@ Comment[tr]=Ağ trafiği çözümleyicisi
 Comment[vi]=Trình phân tích giao thông mạng
 Comment[uk]=Аналізатор мережевого трафіку
 Icon=org.wireshark.Wireshark
-Exec=/usr/bin/distrobox-enter --root -n fedora -- sudo -S /usr/bin/wireshark  %f 
+Exec=/usr/bin/distrobox-enter --root -n fedora -- bash -c 'xhost + && sudo /usr/bin/wireshark'
 Terminal=true
 MimeType=application/vnd.tcpdump.pcap;application/x-pcapng;application/x-snoop;application/x-iptrace;application/x-lanalyzer;application/x-nettl;application/x-radcom;application/x-etherpeek;application/x-visualnetworks;application/x-netinstobserver;application/x-5view;application/x-tektronix-rf5;application/x-micropross-mplog;application/x-apple-packetlogger;application/x-endace-erf;application/ipfix;application/x-ixia-vwr;
 # Category entry according to:
