@@ -2,25 +2,14 @@
 ~/
 ~/Personal/
 ~/Syncthing/
-~/Syncthing/Facultad/
-~/Syncthing/Facultad/Semestre\ 5/
-~/Syncthing/Facultad/Semestre\ 5/TeoríaComputación/
-~/Syncthing/Facultad/Semestre\ 5/AdminGeneral/
-~/Syncthing/Facultad/Semestre\ 5/Redes/
-~/Syncthing/Facultad/Semestre\ 5/Diseño1/
-~/Syncthing/Facultad/Semestre\ 5/BD2/
+~/Syncthing/ORT/
+~/Syncthing/ORT/Semestre\ 5/
+~/Syncthing/ORT/Semestre\ 5/TeoríaComputación/
+~/Syncthing/ORT/Semestre\ 5/AdminGeneral/
+~/Syncthing/ORT/Semestre\ 5/Redes/
+~/Syncthing/ORT/Semestre\ 5/Diseño1/
+~/Syncthing/ORT/Semestre\ 5/BD2/
 ~/Repos/
 ~/.config/
-~/.local/share/Cryptomator/mnt/ORT-/
-~/.local/share/Cryptomator/mnt/ORT-/Semestre\ 1/
-~/.local/share/Cryptomator/mnt/ORT-/Semestre\ 2/
-~/.local/share/Cryptomator/mnt/ORT-/Semestre\ 3/
-~/.local/share/Cryptomator/mnt/ORT-/Semestre\ 4/
-~/.local/share/Cryptomator/mnt/ORT-/Semestre\ 5/
-~/.local/share/Cryptomator/mnt/ORT-/Semestre\ 5/TeoríaComputación/
-~/.local/share/Cryptomator/mnt/ORT-/Semestre\ 5/AdminGeneral/
-~/.local/share/Cryptomator/mnt/ORT-/Semestre\ 5/Redes/
-~/.local/share/Cryptomator/mnt/ORT-/Semestre\ 5/Diseño1/
-~/.local/share/Cryptomator/mnt/ORT-/Semestre\ 5/BD2/
 ~/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/
 ~/.var/app/com.valvesoftware.Steam/.local/share/Steam/
