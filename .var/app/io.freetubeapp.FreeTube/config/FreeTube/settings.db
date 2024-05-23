@@ -1,7 +1,8 @@
-{"_id":"bounds","value":{"x":560,"y":240,"width":1200,"height":800,"maximized":true,"fullScreen":false}}
+{"_id":"bounds","value":{"x":1920,"y":18,"width":1920,"height":1062,"maximized":true,"fullScreen":false}}
 {"_id":"commentAutoLoadEnabled","value":true}
 {"_id":"defaultQuality","value":"1080"}
 {"_id":"defaultTheatreMode","value":true}
+{"_id":"defaultVolume","value":0.5}
 {"_id":"hideHeaderLogo","value":true}
 {"_id":"sponsorBlockIntro","value":{"color":"Orange","skip":"autoSkip"}}
 {"_id":"sponsorBlockOutro","value":{"color":"Orange","skip":"showInSeekBar"}}

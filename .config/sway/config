@@ -10,19 +10,15 @@ set $screenshot ~/.local/bin/screenshot.sh
 set $clipboard_screenshot "grim - | wl-copy"
 set $screenclip ~/.local/bin/screenclip.sh
 set $leave ~/.local/bin/leave.sh
-# set $terminal "kitty tmux new-session -As main"
 set $terminal $term tmux new-session -As main
 set $notes "flatpak run net.cozic.joplin_desktop"
 set $browser "flatpak run io.gitlab.librewolf-community"
 set $file_explorer $term tmux new-session -As Ex
-# set $discord "flatpak run io.github.spacingbat3.webcord"
-# set $discord "flatpak run com.discordapp.Discord"
 set $discord "flatpak run dev.vencord.Vesktop"
 set $steam "steam"
 set $freetube "flatpak run io.freetubeapp.FreeTube"
 set $jellyfin "flatpak run com.github.iwalton3.jellyfin-media-player"
 set $email "flatpak run com.tutanota.Tutanota"
-# set $whatsapp "flatpak run com.github.eneshecan.WhatsAppForLinux"
 set $whatsapp "flatpak run io.github.mimbrero.WhatsAppDesktop"
 set $polkit /usr/libexec/polkit-gnome-authentication-agent-1
 # set $wallpaper ~/Pictures/Wallpapers/green.jpg
@@ -44,7 +40,8 @@ exec corectrl
 # exec swaync
 # exec $keyring
 
-output * bg /usr/share/backgrounds/default.png fill
+# output * bg /usr/share/backgrounds/default.png fill
+output * bg ~/Syncthing/jonatan-pie-aurora.jpg fill
 output DP-1 mode 1920x1080@165hz adaptive_sync off position 1920,0
 output HDMI-A-1 mode 1920x1080@60hz position 0,0
 
@@ -131,7 +128,7 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # font
-font pango:JetBrains Mono Nerd Font 8
+font pango:JetBrains Mono Nerd Font 6
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -233,8 +230,8 @@ client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
 
 for_window [app_id="Alacritty"] opacity 0.9
 for_window [class="Alacritty"] opacity 0.9
-for_window [app_id="kitty"] opacity 0.9
-for_window [class="kitty"] opacity 0.9
+for_window [app_id="kitty"] opacity 0.85
+for_window [class="kitty"] opacity 0.85
 for_window [app_id="foot"] opacity 0.9
 for_window [class="foot"] opacity 0.9
 # Window borders

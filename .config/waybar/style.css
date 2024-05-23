@@ -39,7 +39,7 @@
 /* Reset all styles */
 * {
   font-family: JetBrains Mono Nerd Font;
-  font-size: 14px;
+  font-size: 12px;
   border: none;
   border-radius: 0;
   min-height: 0;
@@ -127,6 +127,7 @@
   /* background: #f28fad; */
   /* background: #bd93f9; */
 }
+
 #memory {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
