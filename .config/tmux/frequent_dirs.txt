@@ -1,5 +1,8 @@
 /
 ~/
+~/Nextcloud/
+~/Nextcloud/Notes/
+~/Nextcloud/Documents/
 ~/.var/app/
 ~/Personal/
 ~/Syncthing/

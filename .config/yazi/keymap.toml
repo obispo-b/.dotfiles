@@ -27,3 +27,8 @@ desc = "Go to repos"
 on   = [ "g", "T" ]
 run = 'cd /tmp'
 desc = "Go to tmp dir"
+
+[[manager.append_keymap]]
+on   = [ "g", "n" ]
+run = 'cd /home/bruno/Nextcloud/Notes/'
+desc = "Go to Nextcloud notes"
