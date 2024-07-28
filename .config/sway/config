@@ -44,7 +44,7 @@ exec waybar
 exec corectrl
 exec $nextcloud
 exec $opentabletdriver
-# exec swaync
+exec swaync
 # exec $keyring
 
 # output * bg /usr/share/backgrounds/default.png fill

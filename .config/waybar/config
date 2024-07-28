@@ -2,7 +2,7 @@
 	"layer": "top",
 	"modules-left": ["custom/power","clock#date","clock#time","custom/media"],
 	"modules-center": ["sway/workspaces", "hyprland/workspaces"],
-	"modules-right": ["custom/updates","backlight","pulseaudio","battery","tray"],
+	"modules-right": ["custom/updates","backlight","pulseaudio","battery","tray","custom/notifications"],
 
 	"bluetooth": {
 	// "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
@@ -109,6 +109,10 @@
      "format": "{icon}",
      "on-scroll-up": "hyprctl dispatch workspace e+1",
      "on-scroll-down": "hyprctl dispatch workspace e-1"
+    },
+    "custom/notifications": {
+        "format": " ",
+        "on-click": "swaync-client -t -sw"
     },
 }
 
