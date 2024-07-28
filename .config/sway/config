@@ -68,6 +68,7 @@ bindsym $mod+u exec $file_explorer
 bindsym $mod+Shift+Print exec $savescreenclip
 bindsym Print exec $screenshot
 bindsym $mod+b exec $clipboard_screenshot
+bindsym $mod+Shift+m exec "swaync-client -t -sw"
 bindsym --release Shift+Print exec $screenclip
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
